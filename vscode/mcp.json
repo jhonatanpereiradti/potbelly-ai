@@ -1,0 +1,65 @@
+{
+  "inputs": [
+    {
+      "id": "ado_org",
+      "type": "promptString",
+      "description": "Azure DevOps organization name  (e.g. 'contoso')"
+    }
+  ],
+  "servers": {
+    "ado": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@azure-devops/mcp", "${input:ado_org}"],
+      "env": {
+        "AZURE_DEVOPS_PAT": "4v6s20arT5tsDHZsgDlWHDCQtzdn4jcbprdEbSQmBAUvNZPF1sUJJQQJ99BGACAAAAAHPvqVAAASAZDO3NLF",
+        "DATA_FOLDER_PATH": "/Users/dtidigital/Documents/potbelly-automation-web-v2/data",
+        "FIGMA_SCREENS_PATH": "/Users/dtidigital/Documents/potbelly-automation-web-v2/data/figma-screens",
+        "PROJECT_DOCS_PATH": "/Users/dtidigital/Documents/potbelly-automation-web-v2/data/project documentation",
+        "TEST_PLANS_PATH": "/Users/dtidigital/Documents/potbelly-automation-web-v2/data/test plans",
+        "USER_STORIES_PATH": "/Users/dtidigital/Documents/potbelly-automation-web-v2/data/user stories",
+        "ALWAYS_USE_DATA_FOLDER": "true"
+      }
+    },
+
+    "maestro": {
+      "command": "maestro",
+      "args": ["mcp"],
+      "env": {
+        "DATA_FOLDER_PATH": "/Users/dtidigital/Documents/potbelly-automation-web-v2/data",
+        "FIGMA_SCREENS_PATH": "/Users/dtidigital/Documents/potbelly-automation-web-v2/data/figma-screens",
+        "PROJECT_DOCS_PATH": "/Users/dtidigital/Documents/potbelly-automation-web-v2/data/project documentation",
+        "TEST_PLANS_PATH": "/Users/dtidigital/Documents/potbelly-automation-web-v2/data/test plans",
+        "USER_STORIES_PATH": "/Users/dtidigital/Documents/potbelly-automation-web-v2/data/user stories",
+        "ALWAYS_USE_DATA_FOLDER": "true"
+      }
+    },
+    "mcp-frontend-testing": {
+      "command": "node",
+      "args": [
+        "/Users/dtidigital/Documents/mcp-frontend-testing/dist/index.js",
+        "--transport=stdio"
+      ],
+      "env": {
+        "DATA_FOLDER_PATH": "/Users/dtidigital/Documents/potbelly-automation-web-v2/data",
+        "FIGMA_SCREENS_PATH": "/Users/dtidigital/Documents/potbelly-automation-web-v2/data/figma-screens",
+        "PROJECT_DOCS_PATH": "/Users/dtidigital/Documents/potbelly-automation-web-v2/data/project documentation",
+        "TEST_PLANS_PATH": "/Users/dtidigital/Documents/potbelly-automation-web-v2/data/test plans",
+        "USER_STORIES_PATH": "/Users/dtidigital/Documents/potbelly-automation-web-v2/data/user stories",
+        "ALWAYS_USE_DATA_FOLDER": "true"
+      }
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"],
+      "env": {
+        "DATA_FOLDER_PATH": "/Users/dtidigital/Documents/potbelly-automation-web-v2/data",
+        "FIGMA_SCREENS_PATH": "/Users/dtidigital/Documents/potbelly-automation-web-v2/data/figma-screens",
+        "PROJECT_DOCS_PATH": "/Users/dtidigital/Documents/potbelly-automation-web-v2/data/project documentation",
+        "TEST_PLANS_PATH": "/Users/dtidigital/Documents/potbelly-automation-web-v2/data/test plans",
+        "USER_STORIES_PATH": "/Users/dtidigital/Documents/potbelly-automation-web-v2/data/user stories",
+        "ALWAYS_USE_DATA_FOLDER": "true"
+      }
+    }
+  }
+}
