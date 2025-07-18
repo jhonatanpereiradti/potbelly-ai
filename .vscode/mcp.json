@@ -14,7 +14,7 @@
       "command": "npx",
       "args": ["-y", "@azure-devops/mcp", "${input:ado_org}"],
       "env": {
-        "AZURE_DEVOPS_PAT": "yourAzureTokenHere",
+       // "AZURE_DEVOPS_PAT": "yourAzureTokenHere",
         "DATA_FOLDER_PATH": "${workspaceFolder}/data",
         "FIGMA_SCREENS_PATH": "${workspaceFolder}/data/figma-screens",
         "PROJECT_DOCS_PATH": "${workspaceFolder}/data/project documentation",
