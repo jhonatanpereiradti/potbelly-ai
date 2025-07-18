@@ -17,9 +17,7 @@
        // "AZURE_DEVOPS_PAT": "yourAzureTokenHere",
         "DATA_FOLDER_PATH": "${workspaceFolder}/data",
         "FIGMA_SCREENS_PATH": "${workspaceFolder}/data/figma-screens",
-        "PROJECT_DOCS_PATH": "${workspaceFolder}/data/project documentation",
-        "TEST_PLANS_PATH": "${workspaceFolder}/data/test plans",
-        "USER_STORIES_PATH": "${workspaceFolder}/data/user stories",
+        "PROJECT_DOCS_PATH": "${workspaceFolder}/data/azure-devops-links",
         "ALWAYS_USE_DATA_FOLDER": "1"
       }
     },
@@ -28,12 +26,6 @@
       "command": "maestro",
       "args": ["mcp"],
       "env": {
-        "DATA_FOLDER_PATH": "${workspaceFolder}/data",
-        "FIGMA_SCREENS_PATH": "${workspaceFolder}/data/figma-screens",
-        "PROJECT_DOCS_PATH": "${workspaceFolder}/data/project documentation",
-        "TEST_PLANS_PATH": "${workspaceFolder}/data/test plans",
-        "USER_STORIES_PATH": "${workspaceFolder}/data/user stories",
-        "ALWAYS_USE_DATA_FOLDER": "1"
       }
     },
     "mcp-frontend-testing": {
@@ -43,24 +35,12 @@
         "--transport=stdio"
       ],
       "env": {
-        "DATA_FOLDER_PATH": "${workspaceFolder}/data",
-        "FIGMA_SCREENS_PATH": "${workspaceFolder}/data/figma-screens",
-        "PROJECT_DOCS_PATH": "${workspaceFolder}/data/project documentation",
-        "TEST_PLANS_PATH": "${workspaceFolder}/data/test plans",
-        "USER_STORIES_PATH": "${workspaceFolder}/data/user stories",
-        "ALWAYS_USE_DATA_FOLDER": "1"
       }
     },
     "playwright": {
       "command": "npx",
       "args": ["@playwright/mcp@latest"],
       "env": {
-        "DATA_FOLDER_PATH": "${workspaceFolder}/data",
-        "FIGMA_SCREENS_PATH": "${workspaceFolder}/data/figma-screens",
-        "PROJECT_DOCS_PATH": "${workspaceFolder}/data/project documentation",
-        "TEST_PLANS_PATH": "${workspaceFolder}/data/test plans",
-        "USER_STORIES_PATH": "${workspaceFolder}/data/user stories",
-        "ALWAYS_USE_DATA_FOLDER": "1"
       }
     }
   }
